@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    include ./header
+    //- h1= title
+    //- p Welcome to #{name}
+    //- a(href = url) Click Me
+    if(user)
+        h1 Hi, #{user.name} and you are #{user.age} years old
+    else
+        a(href = "/sign_up") Sign Up
+
+    include ./footer
